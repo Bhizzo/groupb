@@ -21,7 +21,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/ST6.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/ST6.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -29,29 +29,31 @@ export default function Hero() {
       />
       
       {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className={`max-w-4xl mx-auto text-start ${mounted ? 'animate-fade-up' : 'opacity-0'}`}>
-          <h1 className="text-6xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-6xl">
+        <div className={`max-w-4xl text-left transition-all duration-1000 ${
+          mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 leading-tight">
             BEYOND
             <br />
-            LIMITS
+            <span className="text-white/80">LIMITS</span>
           </h1>
-          <p className="text-lg text-start sm:text-xl text-gray-300 mb-8 max-w-2xl ">
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-200 mb-10 max-w-2xl leading-relaxed">
             We build technology and digital transformation solutions to help you
             compete, adapt, and grow in the digital economy.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-start">
+          <div className="flex flex-col sm:flex-row gap-4">
             <Button 
               size="lg" 
               variant="outline"
-              className="bg-transparent text-white border-white hover:bg-white hover:text-black transition-all px-8 py-4 text-lg font-semibold rounded-none min-w-[200px]"
+              className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-black transition-all duration-300 px-8 py-4 text-lg font-semibold"
               onClick={() => scrollToSection("#what-we-do")}
             >
-              EXPLORE VERIDA
+              EXPLORE SOLUTIONS
             </Button>
             <Button 
               size="lg"
-              className="bg-white text-black hover:bg-gray-200 px-8 py-4 text-lg font-semibold rounded-none min-w-[200px]"
+              className="bg-white text-black hover:bg-gray-100 transition-all duration-300 px-8 py-4 text-lg font-semibold"
               onClick={() => scrollToSection("#contact")}
             >
               PARTNER WITH US
@@ -61,7 +63,9 @@ export default function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-all duration-1000 delay-500 ${
+        mounted ? 'opacity-100 animate-bounce' : 'opacity-0'
+      }`}>
         <svg
           className="w-6 h-6 text-white"
           fill="none"
