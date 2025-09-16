@@ -35,7 +35,7 @@ export default function WhatWeDo() {
       )
     },
     {
-      title: "VERSA FINTECH 4.0",
+      title: "VERIDA",
       description: "Financial Analysis, Planning & Reporting Solution",
       icon: (
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -96,7 +96,7 @@ export default function WhatWeDo() {
               <div className="flex items-center gap-4 mb-4">
                
                 <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
-                  NDINE DOLO
+                  WHAT WE
                   <br />
                   <span className="text-muted-foreground">DO</span>
                 </h2>
