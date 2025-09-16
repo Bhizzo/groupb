@@ -96,7 +96,7 @@ export default function WhatWeDo() {
               <div className="flex items-center gap-4 mb-4">
                
                 <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
-                  WHAT WE
+                  NDINE DOLO
                   <br />
                   <span className="text-muted-foreground">DO</span>
                 </h2>
